@@ -52,3 +52,5 @@ Files handed in this email:
    * The most efficient solution since the methods are called instead of generating the tree nodes (actions are executed when reductions are applied).
  - An additional tree is generated with a second grammar [call_tree] for the function calls.
  - Numeric constants are passed from [call_tree] as an additional parameter to the transformer class called on the tree resulting from parsing [parse_tree].
+ - The decorator should be used to specify the number of arguments expected by the methods, including the 'self' parameter.
+ - In the case of methods with a 'self' parameter, you need to account for it when specifying the arguments for the decorator.
