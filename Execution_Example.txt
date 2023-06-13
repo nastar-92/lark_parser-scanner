@@ -1,0 +1,67 @@
+
+    Subject:        Language Processing Technologies
+    
+    First assignment on parsers using lark library to define the parser/scanner. 
+    Grammar and the Transformer class implementation to process the input.
+
+
+
+    INSTRUCTION FOR FUNCTION DEFINITION:
+     The functions should be defined as follows:
+    
+      function name(par1,par2,…) {
+         return par1 op par2 op par3…;
+      }
+    
+     - Where name is the function name with the usual restrictions (an alphanumeric string
+       beginning with a letter).
+     - par1.. are the function parameters whose names follow the same rules as variables names.
+     - op is + or * (sum or product). 
+     - The function body contains only the return instruction that involves all the parameters.
+     - Only one function can be defined.
+
+		 ==> Example:	         
+    function F1( a, b , c , d , e ) { return b * a + e * d + c ; }    
+    
+		 >>> Please enter the funtion definition:	function F1( a, b , c , d , e ) { return b * a + 
+	### ERROR: Unexpected token 
+n F1( a, b , c , d , e ) { return b * a + 
+                                        ^
+
+		 >>> Please enter the funtion definition:	function F1( a, b , c , d , e ) { return b * a + e * d + c ; }
+		 ==> Function Received!
+	           Name of function: F1
+	             Length(params): 5
+	            Params.children: [Token(CNAME, 'a'), Token(CNAME, 'b'), Token(CNAME, 'c'), Token(CNAME, 'd'), Token(CNAME, 'e')] <class 'list'>
+
+    INSTRUCTION FOR FUNCTION CALLING:
+     Function call syntax:
+    
+      name(cost1,cost2,…);
+    
+     - Where name is the name of a defined function.
+     - cost1,… are numeric constants in the same
+       number as the function arguments.
+
+		 ==> Example:	 F1( -1.6 , 0 , 1 , 2 , 3 );
+
+		 >>> Please enter the funtion calling:	F1( -1.6 , 0 , 1 , 
+	### ERROR: Unexpected token 
+F1( -1.6 , 0 , 1 , 
+                 ^
+
+
+		 >>> Please enter the funtion calling:	F1( -1.6 , 0 , 1 , 2 , 3 );
+		 ==> Result of function call:	 7.0
+
+		 >>> Please enter the funtion calling:	F1( -1.6 , 0 , 1 , 3 );
+	### ERROR: Unexpected token )
+F1( -1.6 , 0 , 1 , 3 );
+                     ^
+
+
+		 >>> Please enter the funtion calling:	F1( -1.6 , 0 , -1.7 , 2 , 3 );
+		 ==> Result of function call:	 4.3
+
+		 >>> Please enter the funtion calling:	stop
+		 ==> Program Finished!
